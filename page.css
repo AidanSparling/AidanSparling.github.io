@@ -1,0 +1,15 @@
+
+body {
+  background-image: url('brauer-tom.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+a {
+    font-size: 5vw;
+    position: fixed;
+    margin: auto;
+    top: 18vh;
+    left: 25vw;
+}
