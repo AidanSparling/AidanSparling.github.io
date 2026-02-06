@@ -1,158 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Daytona Coupe Costs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --text: #333;
+            --accent: #e100ff;
+            --card-bg: #ffffff;
+        }
 
-  <!-- Bootstrap -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous"
-  />
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
 
-  <style>
-    th {
-      cursor: pointer;
-      user-select: none;
-    }
-    th:hover {
-      text-decoration: underline;
-    }
-    .sort-indicator {
-      margin-left: 6px;
-      font-size: 0.8em;
-      opacity: 0.6;
-    }
-  </style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 { font-weight: 700; margin-bottom: 10px; }
+        p { color: #666; }
+
+        /* The Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Project Cards */
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+    </style>
 </head>
+<body>
 
-<body class="container mt-4">
+<div class="container">
+    <header>
+        <h1>Welcome to My Workspace</h1>
+        <p>A collection of my web projects and experiments.</p>
+    </header>
 
-    
-  <p>
-    The cost seems to most directly translate to build quality. No surprise.  If you can think of other headers to sort by let me know.  I'm going through BAT auctions starting from most recent looking for factory five kits with a coyote and an IRS.
-  </p>
-  <h3>Click the header to sort by that column</h3>
-  <hr>
+    <main class="grid">
+        <a href="pages/coupecosts.html" class="card">
+            <h3>Daytona Coupe</h3>
+            <p>A brief look at costs and values of factory five type 65 coupe kits.</p>
+        </a>
 
-  <table class="table table-striped table-bordered">
-    <thead class="thead-dark">
-      <tr>
-        <th data-type="string">Link</th>
-        <th data-type="number"># pictures</th>
-        <th data-type="number">1–10 Interior</th>
-        <th data-type="number">Mileage</th>
-        <th data-type="date">Sale date</th>
-        <th data-type="number">Sale price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="https://bringatrailer.com/listing/factory-five-racing-type-65-coupe-9/">link</a></td>
-        <td>92</td>
-        <td>9.5</td>
-        <td>6</td>
-        <td>12/30/2023</td>
-        <td>77,000</td>
-      </tr>
-      <tr>
-        <td><a href="https://bringatrailer.com/listing/factory-five-racing-type-65-coupe-10/">link</a></td>
-        <td>127</td>
-        <td>6.5</td>
-        <td>440</td>
-        <td>1/14/2024</td>
-        <td>65,000</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://bringatrailer.com/listing/5-2l-aluminator-powered-factory-five-racing-daytona-coupe-5-speed/">
-            link
-          </a>
-        </td>
-        <td>58</td>
-        <td>9.5</td>
-        <td>59</td>
-        <td>6/25/2024</td>
-        <td>113,500</td>
-      </tr>
-      <tr>
-        <td><a href="https://bringatrailer.com/listing/factory-five-racing-daytona-coupe-6/">link</a></td>
-        <td>116</td>
-        <td>6</td>
-        <td>360</td>
-        <td>9/14/2024</td>
-        <td>78,500</td>
-      </tr>
-      <tr>
-        <td><a href="https://bringatrailer.com/listing/2017-factory-five-racing-type-65-coupe-gen-iii/">link</a></td>
-        <td>153</td>
-        <td>7</td>
-        <td>733</td>
-        <td>10/30/2024</td>
-        <td>65,001</td>
-      </tr>
-      <tr>
-        <td><a href="#">link</a></td>
-        <td>217</td>
-        <td>8.5</td>
-        <td>973</td>
-        <td>5/29/2025</td>
-        <td>70,000</td>
-      </tr>
-      <tr>
-        <td><a href="#">link</a></td>
-        <td>235</td>
-        <td>7</td>
-        <td>3400</td>
-        <td>5/22/2025</td>
-        <td>63,000</td>
-      </tr>
-    </tbody>
-  </table>
+        <a href="pages/resume.html" class="card">
+            <h3>My Resume</h3>
+            <p>A pdf of my current best resume</p>
+        </a>
 
-  <script>
-    document.querySelectorAll("th").forEach((header, columnIndex) => {
-      let ascending = true;
-      const indicator = document.createElement("span");
-      indicator.className = "sort-indicator";
-      header.appendChild(indicator);
+        <a href="pages/svoirs.html" class="card">
+            <h3>Plot it irs the svo</h3>
+            <p>A page to stop the irs snowball.</p>
+        </a>
 
-      header.addEventListener("click", () => {
-        const table = header.closest("table");
-        const tbody = table.querySelector("tbody");
-        const rows = Array.from(tbody.querySelectorAll("tr"));
-        const type = header.dataset.type;
-
-        // Clear other indicators
-        document.querySelectorAll(".sort-indicator").forEach(i => i.textContent = "");
-
-        const getValue = (row) =>
-          row.children[columnIndex].innerText.trim();
-
-        rows.sort((a, b) => {
-          let A = getValue(a);
-          let B = getValue(b);
-
-          if (type === "number") {
-            A = parseFloat(A.replace(/,/g, ""));
-            B = parseFloat(B.replace(/,/g, ""));
-          } else if (type === "date") {
-            A = new Date(A);
-            B = new Date(B);
-          }
-
-          return ascending ? (A > B ? 1 : -1) : (A < B ? 1 : -1);
-        });
-
-        indicator.textContent = ascending ? "▲" : "▼";
-        ascending = !ascending;
-
-        rows.forEach(row => tbody.appendChild(row));
-      });
-    });
-  </script>
+        </main>
+</div>
 
 </body>
 </html>

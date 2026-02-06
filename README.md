@@ -1,3 +1,3 @@
 # AidanSparling.github.io
-Looking into factory five kit car cost and value.
+Page for pages about my current interests.
 Outward
